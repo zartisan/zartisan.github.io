@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/13/Flink KeyedStream Aggregations/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2019/02/13/Flink KeyedStream Aggregations/" itemprop="url">Flink KeyedStream Aggregations</a></h1>
         
 
         <div class="post-meta">
@@ -300,7 +300,7 @@
       
         
           
-            <h1 id="Flink-KeyedStream-Aggregations"><a href="#Flink-KeyedStream-Aggregations" class="headerlink" title="Flink KeyedStream Aggregations"></a>Flink KeyedStream Aggregations</h1><h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p>Rolling aggregations on a keyed data stream. The difference between min and minBy is that min returns the minimum value, whereas minBy returns the element that has the minimum value in this field (same for max and maxBy).</p>
+            <h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p>Rolling aggregations on a keyed data stream. The difference between min and minBy is that min returns the minimum value, whereas minBy returns the element that has the minimum value in this field (same for max and maxBy).</p>
 <blockquote>
 <p><a href="https://ci.apache.org/projects/flink/flink-docs-release-1.7/dev/stream/operators/" target="_blank" rel="noopener">文档链接</a></p>
 </blockquote>
@@ -331,6 +331,165 @@
 <p>testMaxBy:</p>
 <blockquote>
 <p>MyWordCount{count=1, word=’World’, frequency=3}<br>MyWordCount{count=1, word=’Hello’, frequency=1}<br>MyWordCount{count=2, word=’Hello’, frequency=2}<br>MyWordCount{count=3, word=’Hello’, frequency=3}</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/29/Flink DataStream/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zart">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zart's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/29/Flink DataStream/" itemprop="url">Flink DataStream</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-29T09:38:48+08:00">
+                2019-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="流的构造与转换"><a href="#流的构造与转换" class="headerlink" title="流的构造与转换"></a>流的构造与转换</h2><h3 id="union"><a href="#union" class="headerlink" title="union"></a>union</h3><p><code>public final DataStream&lt;T&gt; union(DataStream&lt;T&gt;... streams)</code></p>
+<blockquote>
+<p>transformed and merge</p>
+</blockquote>
+<h3 id="spilt"><a href="#spilt" class="headerlink" title="spilt"></a>spilt</h3><p><code>public SplitStream&lt;T&gt; split(OutputSelector&lt;T&gt; outputSelector)</code></p>
+<blockquote>
+<p>基于outputSelector输出被命名的SplitStream</p>
+</blockquote>
+<h3 id="connect"><a href="#connect" class="headerlink" title="connect"></a>connect</h3><p><code>public &lt;R&gt; ConnectedStreams&lt;T, R&gt; connect(DataStream&lt;R&gt; dataStream)</code><br><code>public &lt;R&gt; BroadcastConnectedStream&lt;T, R&gt; connect(BroadcastStream&lt;R&gt; broadcastStream)</code></p>
+<blockquote>
+<p>在 DataStream 上有一个 union 的转换 dataStream.union(otherStream1, otherStream2, …)，用来合并多个流，新的流会包含所有流中的数据。union 有一个限制，就是所有合并的流的类型必须是一致的。ConnectedStreams 提供了和 union 类似的功能，用来连接两个流，但是与 union 转换有以下几个区别：</p>
+<pre><code>1. ConnectedStreams 只能连接两个流，而 union 可以连接多于两个流；
+2. ConnectedStreams 连接的两个流类型可以不一致，而 union 连接的流的类型必须一致；
+3. ConnectedStreams 会对两个流的数据应用不同的处理方法，并且双流之间可以共享状态。这在第一个流的输入会影响第二个流时, 会非常有用，比如计数。
+</code></pre></blockquote>
+<h3 id="keyBy"><a href="#keyBy" class="headerlink" title="keyBy"></a>keyBy</h3><p><code>public &lt;K&gt; KeyedStream&lt;T, K&gt; keyBy(KeySelector&lt;T, K&gt; key)</code><br><code>public &lt;K&gt; KeyedStream&lt;T, K&gt; keyBy(KeySelector&lt;T, K&gt; key, TypeInformation&lt;K&gt; keyType)</code><br><code>public KeyedStream&lt;T, Tuple&gt; keyBy(int... fields)</code><br><code>public KeyedStream&lt;T, Tuple&gt; keyBy(String... fields)</code><br><code>private KeyedStream&lt;T, Tuple&gt; keyBy(Keys&lt;T&gt; keys)</code></p>
+<blockquote>
+<p>基于KeySelector生成KeyedStream，可以对KeyedStream进行window、aggregate、statistics（min、max、sum）等操作。</p>
+</blockquote>
+<h2 id="流的分区"><a href="#流的分区" class="headerlink" title="流的分区"></a>流的分区</h2><h3 id="partitionCustom"><a href="#partitionCustom" class="headerlink" title="partitionCustom"></a>partitionCustom</h3><blockquote>
+<p>自己提供分区函数Partitioner\&lt;K></p>
+</blockquote>
+<h3 id="broadcast"><a href="#broadcast" class="headerlink" title="broadcast"></a>broadcast</h3><blockquote>
+<p>每个分区都有一份全量的数据</p>
+</blockquote>
+<h3 id="shuffle"><a href="#shuffle" class="headerlink" title="shuffle"></a>shuffle</h3><blockquote>
+<p>使用<code>random.nextInt</code>实现随机</p>
+</blockquote>
+<h3 id="forward"><a href="#forward" class="headerlink" title="forward"></a>forward</h3><blockquote>
+<p>默认返回0<br>文档中描述为：the output elements are forwarded to the local subtask of the next operation.</p>
+</blockquote>
+<h3 id="rebalance"><a href="#rebalance" class="headerlink" title="rebalance"></a>rebalance</h3><blockquote>
+<p>将element轮询分配到所有分区，第一次的分区数随机生成。</p>
+</blockquote>
+<h3 id="rescale"><a href="#rescale" class="headerlink" title="rescale"></a>rescale</h3><blockquote>
+<p>将element轮询分配到所有分区，第一次的分区数为0。</p>
+</blockquote>
+<h3 id="global"><a href="#global" class="headerlink" title="global"></a>global</h3><blockquote>
+<p>同forward，默认返回0。<br>文档中描述为：Sets the partitioning of the {@link DataStream} so that the output values all go to the first instance of the next processing operator. Use this setting with care since it might cause a serious performance bottleneck in the application.</p>
 </blockquote>
 
           
@@ -972,7 +1131,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

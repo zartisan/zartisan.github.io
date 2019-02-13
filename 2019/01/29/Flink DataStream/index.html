@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="流的构造与转换unionpublic final DataStream&amp;lt;T&amp;gt; union(DataStream&amp;lt;T&amp;gt;... streams)  transformed and merge  spiltpublic SplitStream&amp;lt;T&amp;gt; split(OutputSelector&amp;lt;T&amp;gt; outputSelector)  基于outputSelec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/07/30/hello-world/index.html">
+<meta property="og:title" content="Flink DataStream">
+<meta property="og:url" content="http://yoursite.com/2019/01/29/Flink DataStream/index.html">
 <meta property="og:site_name" content="zart&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="流的构造与转换unionpublic final DataStream&amp;lt;T&amp;gt; union(DataStream&amp;lt;T&amp;gt;... streams)  transformed and merge  spiltpublic SplitStream&amp;lt;T&amp;gt; split(OutputSelector&amp;lt;T&amp;gt; outputSelector)  基于outputSelec">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-30T13:44:49.000Z">
+<meta property="og:updated_time" content="2019-02-13T08:13:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Flink DataStream">
+<meta name="twitter:description" content="流的构造与转换unionpublic final DataStream&amp;lt;T&amp;gt; union(DataStream&amp;lt;T&amp;gt;... streams)  transformed and merge  spiltpublic SplitStream&amp;lt;T&amp;gt; split(OutputSelector&amp;lt;T&amp;gt; outputSelector)  基于outputSelec">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/30/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/01/29/Flink DataStream/"/>
 
 
 
 
 
-  <title>Hello World | zart's blog</title>
+  <title>Flink DataStream | zart's blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/30/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/29/Flink DataStream/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zart">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Flink DataStream</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-30T21:44:49+08:00">
-                2018-07-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-29T09:38:48+08:00">
+                2019-01-29
               </time>
             
 
@@ -299,15 +299,46 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="流的构造与转换"><a href="#流的构造与转换" class="headerlink" title="流的构造与转换"></a>流的构造与转换</h2><h3 id="union"><a href="#union" class="headerlink" title="union"></a>union</h3><p><code>public final DataStream&lt;T&gt; union(DataStream&lt;T&gt;... streams)</code></p>
+<blockquote>
+<p>transformed and merge</p>
+</blockquote>
+<h3 id="spilt"><a href="#spilt" class="headerlink" title="spilt"></a>spilt</h3><p><code>public SplitStream&lt;T&gt; split(OutputSelector&lt;T&gt; outputSelector)</code></p>
+<blockquote>
+<p>基于outputSelector输出被命名的SplitStream</p>
+</blockquote>
+<h3 id="connect"><a href="#connect" class="headerlink" title="connect"></a>connect</h3><p><code>public &lt;R&gt; ConnectedStreams&lt;T, R&gt; connect(DataStream&lt;R&gt; dataStream)</code><br><code>public &lt;R&gt; BroadcastConnectedStream&lt;T, R&gt; connect(BroadcastStream&lt;R&gt; broadcastStream)</code></p>
+<blockquote>
+<p>在 DataStream 上有一个 union 的转换 dataStream.union(otherStream1, otherStream2, …)，用来合并多个流，新的流会包含所有流中的数据。union 有一个限制，就是所有合并的流的类型必须是一致的。ConnectedStreams 提供了和 union 类似的功能，用来连接两个流，但是与 union 转换有以下几个区别：</p>
+<pre><code>1. ConnectedStreams 只能连接两个流，而 union 可以连接多于两个流；
+2. ConnectedStreams 连接的两个流类型可以不一致，而 union 连接的流的类型必须一致；
+3. ConnectedStreams 会对两个流的数据应用不同的处理方法，并且双流之间可以共享状态。这在第一个流的输入会影响第二个流时, 会非常有用，比如计数。
+</code></pre></blockquote>
+<h3 id="keyBy"><a href="#keyBy" class="headerlink" title="keyBy"></a>keyBy</h3><p><code>public &lt;K&gt; KeyedStream&lt;T, K&gt; keyBy(KeySelector&lt;T, K&gt; key)</code><br><code>public &lt;K&gt; KeyedStream&lt;T, K&gt; keyBy(KeySelector&lt;T, K&gt; key, TypeInformation&lt;K&gt; keyType)</code><br><code>public KeyedStream&lt;T, Tuple&gt; keyBy(int... fields)</code><br><code>public KeyedStream&lt;T, Tuple&gt; keyBy(String... fields)</code><br><code>private KeyedStream&lt;T, Tuple&gt; keyBy(Keys&lt;T&gt; keys)</code></p>
+<blockquote>
+<p>基于KeySelector生成KeyedStream，可以对KeyedStream进行window、aggregate、statistics（min、max、sum）等操作。</p>
+</blockquote>
+<h2 id="流的分区"><a href="#流的分区" class="headerlink" title="流的分区"></a>流的分区</h2><h3 id="partitionCustom"><a href="#partitionCustom" class="headerlink" title="partitionCustom"></a>partitionCustom</h3><blockquote>
+<p>自己提供分区函数Partitioner\&lt;K></p>
+</blockquote>
+<h3 id="broadcast"><a href="#broadcast" class="headerlink" title="broadcast"></a>broadcast</h3><blockquote>
+<p>每个分区都有一份全量的数据</p>
+</blockquote>
+<h3 id="shuffle"><a href="#shuffle" class="headerlink" title="shuffle"></a>shuffle</h3><blockquote>
+<p>使用<code>random.nextInt</code>实现随机</p>
+</blockquote>
+<h3 id="forward"><a href="#forward" class="headerlink" title="forward"></a>forward</h3><blockquote>
+<p>默认返回0<br>文档中描述为：the output elements are forwarded to the local subtask of the next operation.</p>
+</blockquote>
+<h3 id="rebalance"><a href="#rebalance" class="headerlink" title="rebalance"></a>rebalance</h3><blockquote>
+<p>将element轮询分配到所有分区，第一次的分区数随机生成。</p>
+</blockquote>
+<h3 id="rescale"><a href="#rescale" class="headerlink" title="rescale"></a>rescale</h3><blockquote>
+<p>将element轮询分配到所有分区，第一次的分区数为0。</p>
+</blockquote>
+<h3 id="global"><a href="#global" class="headerlink" title="global"></a>global</h3><blockquote>
+<p>同forward，默认返回0。<br>文档中描述为：Sets the partitioning of the {@link DataStream} so that the output values all go to the first instance of the next processing operator. Use this setting with care since it might cause a serious performance bottleneck in the application.</p>
+</blockquote>
 
       
     </div>
@@ -332,14 +363,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/27/mybatis + durid (不使用spring)/" rel="next" title="mybatis + durid (不使用spring)">
+                <i class="fa fa-chevron-left"></i> mybatis + durid (不使用spring)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/11/maven使用profile及在idea中指定profile/" rel="prev" title="maven使用profile及在idea中指定profile">
-                maven使用profile及在idea中指定profile <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/13/Flink KeyedStream Aggregations/" rel="prev" title="Flink KeyedStream Aggregations">
+                Flink KeyedStream Aggregations <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -454,7 +489,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#流的构造与转换"><span class="nav-number">1.</span> <span class="nav-text">流的构造与转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#union"><span class="nav-number">1.1.</span> <span class="nav-text">union</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spilt"><span class="nav-number">1.2.</span> <span class="nav-text">spilt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#connect"><span class="nav-number">1.3.</span> <span class="nav-text">connect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#keyBy"><span class="nav-number">1.4.</span> <span class="nav-text">keyBy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流的分区"><span class="nav-number">2.</span> <span class="nav-text">流的分区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#partitionCustom"><span class="nav-number">2.1.</span> <span class="nav-text">partitionCustom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#broadcast"><span class="nav-number">2.2.</span> <span class="nav-text">broadcast</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shuffle"><span class="nav-number">2.3.</span> <span class="nav-text">shuffle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forward"><span class="nav-number">2.4.</span> <span class="nav-text">forward</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rebalance"><span class="nav-number">2.5.</span> <span class="nav-text">rebalance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rescale"><span class="nav-number">2.6.</span> <span class="nav-text">rescale</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#global"><span class="nav-number">2.7.</span> <span class="nav-text">global</span></a></li></ol></li></ol></div>
             
 
           </div>
